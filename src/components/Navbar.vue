@@ -22,6 +22,7 @@ import { RouterLink } from 'vue-router';
   display: flex;
   align-items: center;
   padding: 1.5rem;
+  
 }
 
 .nav-layout ul {
@@ -37,7 +38,7 @@ import { RouterLink } from 'vue-router';
 .nav-layout li a {
   color: white;
   text-decoration: none;
-  font-size: 20px;
+  font-size: px;
   font-weight: bold;
   transition: color 0.3s ease;
   padding: 1rem;

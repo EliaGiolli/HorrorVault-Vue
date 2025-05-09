@@ -1,3 +1,12 @@
 <template>
-    <h1>list film page</h1>
+   
 </template>
+
+<script setup>
+
+</script>
+
+
+<style scoped>
+
+</style>

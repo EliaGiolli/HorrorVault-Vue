@@ -5,10 +5,10 @@
     <main>
       <RouterView />  
     </main>
-  </template>
+</template>
   
-  <script setup>
-  import Navbar from './components/Navbar.vue'  // Importa la barra di navigazione
-  import { RouterView } from 'vue-router'  // Importa RouterView per il rendering delle route
-  </script>
+<script setup>
+  import Navbar from './components/Navbar.vue'  
+  import { RouterView } from 'vue-router' 
+</script>
   
