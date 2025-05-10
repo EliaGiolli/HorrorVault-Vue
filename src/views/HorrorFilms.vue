@@ -26,8 +26,18 @@ import { films } from '../data/filmsData.js'
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
   padding: 2rem;
+  min-height: 500px;
 }
+.img-div{
+  padding: 1rem;
+  width:100%;
 
+  & img{
+    object-fit: fit;
+    width: 100%;
+    max-height: 300px;
+  }
+}
 .card-inner-div {
   display: flex;
   flex-direction: column;

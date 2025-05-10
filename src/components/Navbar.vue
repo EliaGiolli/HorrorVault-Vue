@@ -34,7 +34,7 @@ import { RouterLink } from 'vue-router';
   padding: 0;
   margin: 0;
 }
-
+/* In Vue Router Link is considered an anchor tag (<a>)  */
 .nav-layout li a {
   color: white;
   text-decoration: none;
@@ -48,7 +48,7 @@ import { RouterLink } from 'vue-router';
   color: #FF4C4C;
 }
 
-/* router-link-active è una classe di vue-router */
+/* router-link-active is a class provided by Vue Router */
 .router-link-active {
   color: #FFD700;
   border-bottom: 2px solid #FFD700;
