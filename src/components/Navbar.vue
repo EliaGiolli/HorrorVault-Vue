@@ -16,13 +16,13 @@ import { RouterLink } from 'vue-router';
 
 <style scoped>
 .nav-layout {
-  background-color: #592C80;
+  background-color: var(--color-primary);
   width: 100%;
-  min-height: 60px;
+  min-height: 100px;
   display: flex;
   align-items: center;
   padding: 1.5rem;
-  
+  border-bottom: 1px solid var(--color-light);
 }
 
 .nav-layout ul {
@@ -36,21 +36,21 @@ import { RouterLink } from 'vue-router';
 }
 /* In Vue Router Link is considered an anchor tag (<a>)  */
 .nav-layout li a {
-  color: white;
+  color: var(--color-text-primary);
   text-decoration: none;
-  font-size: px;
+  font-size: var(--font-sm);
   font-weight: bold;
   transition: color 0.3s ease;
-  padding: 1rem;
+  padding: 0.8rem;
 }
 
 .nav-layout li a:hover {
-  color: #FF4C4C;
+  color: var(--color-accent);
 }
 
 /* router-link-active is a class provided by Vue Router */
 .router-link-active {
-  color: #FFD700;
-  border-bottom: 2px solid #FFD700;
+  color: var(--color-text-active);
+  border-bottom: 2px solid var(--color-text-active);
 }
 </style>

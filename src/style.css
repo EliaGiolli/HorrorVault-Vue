@@ -18,6 +18,7 @@
   /* Texts */
   --color-text-primary: #FFFFFF;      /* Bianco - testi principali */
   --color-text-secondary: #D1B2FF;    /* Viola chiarissimo - testi secondari/disabilitati */
+  --color-text-active: #FFD700;
 }
 
 

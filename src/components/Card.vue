@@ -20,16 +20,16 @@
 
 <style scoped>
  .film-card{
-    background-color: #7F3FBF;
+    background-color: var(--color-secondary);
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border: 1px solid #A266FF;
-    border-radius: 11px;
-    box-shadow: 0 10px 15px #fff, 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color-light);
+    border-radius: 0.8rem;
+    box-shadow: 0 10px 15px var(--color-text-primary), 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
  }
  /* Media query for middle-size devices - width 768px (md) */

@@ -24,7 +24,7 @@ import { films } from '../data/filmsData.js'
   display: grid;
   /*  every row has a width of minimum 250px but it can grow up until 1fr */
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
   padding: 2rem;
   min-height: 500px;
 }
@@ -44,11 +44,12 @@ import { films } from '../data/filmsData.js'
   gap: 0.5rem;
 }
 .card-inner-div p{
-    font-size: 20px;
+    font-size: var(--font-lg);
+    padding: 0.75rem;
 }
 h2 {
   margin-bottom: 0.5rem;
-  font-size: 1.3rem;
+  font-size: var(--font-2xl);
   color: #FF4C4C; 
 }
 

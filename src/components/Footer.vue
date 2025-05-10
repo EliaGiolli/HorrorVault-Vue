@@ -22,11 +22,11 @@
 
 <style>
     footer{
-        background-color: #592C80;
+        background-color: var(--color-primary);
         height: 100px;
         padding: 1rem 1.5rem;
         margin-top: 2rem;
-        border-top: 1px solid #A266FF;
+        border-top: 1px solid var(--color-light);
     }
     .main-wrapper{
         display: flex;
@@ -44,9 +44,9 @@
         text-align: center;
         
         & p{
-            font-size: 15px;
+            font-size: var(--font-xl);
             font-weight: bold;
-            color: #D1B2FF;
+            color: var(--color-text-secondary);
         }
     }
     ul{
@@ -63,12 +63,12 @@
 
     ul li a{
         
-        color: white;
+        color: var(--color-text-primary);
         text-decoration: none;
-        font-size: px;
+        font-size: var(--font-sm);
         font-weight: bold;
         transition: color 0.3s ease;
-        padding: 1rem;
+        padding: 0.75rem;
 
         &:hover{
             color: #FF4C4C;
@@ -81,7 +81,10 @@
             flex-direction: row;
         }
         .date-div p{
-            font-size:20px;
+            font-size:var(--font-xl);
         }
-}
+         ul li a{
+            font-size:var(--font-md)
+         }
+    }
 </style>
