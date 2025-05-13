@@ -3,11 +3,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 // Importa le tue views (pagine)
-import Homepage from './views/Homepage.vue'
-import About from './views/About.vue'
-import HorrorFilms from './views/HorrorFilms.vue'
-import FilmList from './views/FilmList.vue'
-import Contacts from './views/Contacts.vue'
+import Homepage from '../views/Homepage.vue'
+import About from '../views/About.vue'
+import HorrorFilms from '../views/HorrorFilms.vue'
+import FilmList from '../views/FilmList.vue'
+import Contacts from '../views/Contacts.vue'
 
 // Crea il router
 const routes = [
