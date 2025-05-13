@@ -44,7 +44,7 @@ import { RouterLink } from 'vue-router';
   padding: 0.8rem;
 }
 
-.nav-layout li a:hover {
+.nav-layout li a:is(:hover, :focus) {
   color: var(--color-accent);
 }
 

@@ -10,13 +10,15 @@ import Homepage from './views/Homepage.vue'
 import About from './views/About.vue'
 import HorrorFilms from './views/HorrorFilms.vue'
 import FilmList from './views/FilmList.vue'
+import Contacts from './views/Contacts.vue'
 
 // Crea il router
 const routes = [
   { path: '/', component: Homepage },
   { path: '/about', component: About },
   { path: '/horror', component: HorrorFilms },
-  { path: '/films', component: FilmList }
+  { path: '/films', component: FilmList },
+  { path: '/contacts', component: Contacts}
 ]
 
 const router = createRouter({

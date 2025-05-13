@@ -1,5 +1,5 @@
 <template>
-     <section class="horror-card-section">
+     <main class="horror-card-section">
         <Card v-for="film in films" :key="film.id">
             <h2>{{ film.title }}</h2>
             <div class="img-div">
@@ -11,7 +11,7 @@
                 <p>Year of Publication: {{ film.year }}</p>
             </div>
         </Card>
-    </section>
+      </main>
 </template>
 
 <script setup>
@@ -35,7 +35,7 @@ import { films } from '../data/filmsData.js'
   & img{
     object-fit: fit;
     width: 100%;
-    max-height: 300px;
+    height: 300px;
   }
 }
 .card-inner-div {
