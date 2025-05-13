@@ -33,7 +33,7 @@ import { films } from '../data/filmsData.js'
   width:100%;
 
   & img{
-    object-fit: fit;
+    object-fit: cover;
     width: 100%;
     height: 300px;
   }

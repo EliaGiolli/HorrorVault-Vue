@@ -10,9 +10,15 @@
             <!-- This line loops throgh the API data and creates a new card with these data-->
             <!-- If the property 'film.poster_path' doesn't exist, the card is not shown in the DOM-->
             <Card v-if="film.poster_path">
-                <img :src="`https://image.tmdb.org/t/p/w500${film.poster_path}`" :alt="film.title" class="w-full h-auto object-cover mb-2" />
-                <h2 class="text-xl font-semibold">{{ film.title }}</h2>
-                <p class="text-sm text-[#D1B2FF]">{{ film.release_date?.slice(0, 4) }}</p>
+                <img :src="`https://image.tmdb.org/t/p/w500${film.poster_path}`" :alt="film.title" class="film-img" />
+                <div class="card-div">
+                    <h2>{{ film.title }}</h2>
+                    <div class="card-inner-div">
+                        <p>Popularity: {{ film.popularity }}</p>
+                        <p> Original Language: {{ film.original_language }}</p>
+                        <p>Release year: {{ film.release_date?.slice(0, 4) }}</p>
+                    </div>
+                </div>
             </Card>
       </template>
     </section>
@@ -37,6 +43,7 @@
             const res = await fetch(url);
             if(!res.ok) throw new Error('network error');
             const data = await res.json();
+            console.log(data, 'data fetched')
             //we're accessing the property 'results' inside the JSON object retrieved from the API call
             films.value = data.results;
         }catch(err){
@@ -70,5 +77,31 @@
         padding: 2rem;
         min-height: 500px;
     }
+    .film-img{
+        width: 100%;
+        height:auto-fit;
+        object-fit: cover;
+        padding: 1rem;
+    }
+    .card-div{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .card-div h2{
+        font-size: var(--font-2xl);
+        font-weight: bold;
+        color: var(--color-accent)
+    }
+    .card-div p{
+        font-size: var(--font-lg);
+        padding: 0.75rem;
+    }
 
+
+    @media (min-width: 768px) {
+        .card-div h2{
+            font-size: var(--font-xl);
+        }
+}
 </style>
