@@ -1,44 +1,52 @@
 <template>
   <section class="about-container" aria-labelledby="about-heading">
     <article class="about-content">
-        <!-- aria-labelledby help screen reader to read the title -->
-        <!-- they are usually linked to an id attribute -->
+      <!-- aria-labelledby help screen reader to read the title -->
+      <!-- they are usually linked to an id attribute -->
       <h1 id="about-heading">Benvenuto su HorrorVault</h1>
       <p>
-        HorrorVault è il tuo rifugio digitale per esplorare il mondo del cinema horror. 
-        Che tu sia un fan del terrore psicologico, dei mostri classici o delle gemme nascoste 
+        HorrorVault è il tuo rifugio digitale per esplorare il mondo del cinema horror.
+        Che tu sia un fan del terrore psicologico, dei mostri classici o delle gemme nascoste
         degli anni '70 e '80, qui troverai film da scoprire, amare (o temere) e condividere.
       </p>
 
       <section aria-labelledby="features-heading">
-       <div class="features-div">
-            <Icon icon="mdi:film" width="24" height="24" class="icon"/>
-            <h2 id="features-heading"> Cosa troverai qui</h2>
-       </div>
+        <div class="features-div">
+          <Icon icon="mdi:film" width="24" height="24" class="icon" />
+          <h2 id="features-heading">Cosa troverai qui</h2>
+        </div>
         <ul class="content-list">
-            <li>Una raccolta curata di film horror di ogni epoca e sottogenere</li>
-            <li>Schede dettagliate con locandina, trama e data di uscita</li>
-            <li>Un’interfaccia semplice e reattiva pensata per gli appassionati</li>
+          <li>Una raccolta curata di film horror di ogni epoca e sottogenere</li>
+          <li>Schede dettagliate con locandina, trama e data di uscita</li>
+          <li>Un’interfaccia semplice e reattiva pensata per gli appassionati</li>
         </ul>
       </section>
 
       <section aria-labelledby="mission-heading">
         <div class="features-div">
-            <Icon icon="mdi:brain" width="24" height="24" class="icon"/>
-            <h2 id="mission-heading">La nostra missione</h2>
+          <Icon icon="mdi:brain" width="24" height="24" class="icon" />
+          <h2 id="mission-heading">La nostra missione</h2>
         </div>
         <p>
-            L’obiettivo di HorrorVault è quello di dare valore al genere horror 
-            e rendere accessibili i suoi titoli più iconici e quelli meno conosciuti, 
-            anche a chi si affaccia per la prima volta a questo universo.
+          L’obiettivo di HorrorVault è quello di dare valore al genere horror
+          e rendere accessibili i suoi titoli più iconici e quelli meno conosciuti,
+          anche a chi si affaccia per la prima volta a questo universo.
         </p>
       </section>
+
+      <Button 
+        aria-label="Vai alla pagina dei film horror"
+        to="/horror"
+      >
+        Guarda i nostri film
+      </Button>
     </article>
   </section>
 </template>
 
 <script setup>
 import { Icon } from '@iconify/vue';
+import Button from '../components/Button.vue';
 </script>
 
 <style scoped>
@@ -97,10 +105,18 @@ import { Icon } from '@iconify/vue';
 
     .icon {
       color: var(--color-accent);
+      transition: color 0.3s ease-in-out;
 
       &:hover {
         color: var(--color-text-active);
       }
+    }
+
+    .about-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      text-align: center;
+      font-size: var(--font-md);
     }
   }
 
@@ -132,5 +148,4 @@ import { Icon } from '@iconify/vue';
     }
   }
 }
-
 </style>
