@@ -2,7 +2,7 @@
     <footer>
         <div class="main-wrapper">
             <div class="date-div">
-               <p> © {{ currentYear }} HorrorVault. All rights reserved.</p>
+               <h1> © {{ currentYear }} HorrorVault.</h1>
             </div>
             <ul>
                 <li><RouterLink to="/">Home</RouterLink></li>
@@ -43,7 +43,7 @@
         align-items: center;
         text-align: center;
         
-        & p{
+        & h1{
             font-size: var(--font-xl);
             font-weight: bold;
             color: var(--color-text-secondary);
@@ -55,7 +55,6 @@
         align-items: center;
         list-style: none;
         gap: 0.5rem;
-        font-size: 10px;
         width: 100%;
         padding: 0;
         margin: 0;
@@ -68,7 +67,7 @@
         font-size: var(--font-sm);
         font-weight: bold;
         transition: color 0.3s ease;
-        padding: 0.75rem;
+        padding: 0.50rem;
 
         &:hover{
             color: #FF4C4C;
@@ -84,7 +83,8 @@
             font-size:var(--font-xl);
         }
          ul li a{
-            font-size:var(--font-md)
+            font-size:var(--font-md);
+            padding:0.75rem;
          }
     }
 </style>

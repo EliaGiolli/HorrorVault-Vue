@@ -23,34 +23,37 @@ import { RouterLink } from 'vue-router';
   align-items: center;
   padding: 1.5rem;
   border-bottom: 1px solid var(--color-light);
+
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      a {
+        color: var(--color-text-primary);
+        text-decoration: none;
+        font-size: var(--font-sm);
+        font-weight: bold;
+        transition: color 0.3s ease;
+        padding: 0.5rem;
+
+        &:is(:hover, :focus) {
+          color: var(--color-accent);
+        }
+      }
+    }
+  }
+
+  /* router-link-active è gestita da Vue Router */
+  :global(.router-link-active) {
+    color: var(--color-text-active);
+    border-bottom: 2px solid var(--color-text-active);
+  }
 }
 
-.nav-layout ul {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-/* In Vue Router Link is considered an anchor tag (<a>)  */
-.nav-layout li a {
-  color: var(--color-text-primary);
-  text-decoration: none;
-  font-size: var(--font-sm);
-  font-weight: bold;
-  transition: color 0.3s ease;
-  padding: 0.8rem;
-}
-
-.nav-layout li a:is(:hover, :focus) {
-  color: var(--color-accent);
-}
-
-/* router-link-active is a class provided by Vue Router */
-.router-link-active {
-  color: var(--color-text-active);
-  border-bottom: 2px solid var(--color-text-active);
-}
 </style>
