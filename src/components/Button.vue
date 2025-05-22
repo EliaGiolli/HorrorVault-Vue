@@ -44,8 +44,7 @@ const isRouter = !!props.to;
   text-decoration: none;
 }
 
-.customBtn:hover,
-.customBtn.router-link-active {
+.customBtn:is(:hover, .router-link-active) {
   background-color: var(--color-text-active);
   color: var(--color-background);
 }

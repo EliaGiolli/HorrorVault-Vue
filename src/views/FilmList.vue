@@ -33,6 +33,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
+
 const API_KEY = 'ca1937478f8af0383cb6dbcdc0d95e9a';
 const url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=adventure`;
 
@@ -78,7 +79,7 @@ onMounted(async () => {
   }
 
   .film-card {
-    background-color: var(--color-light);
+    background-color: var(--color-background);
     border: 1px solid var(--color-border);
     border-radius: 10px;
     overflow: hidden;

@@ -7,17 +7,20 @@
   --font-lg: 1.25rem;
   --font-xl: 1.5rem;
   --font-2xl: 2rem;
+  --font-3xl: 3rem;
 
   /* Main color Palette */
   --color-primary: #592C80;           /* Viola scuro - navbar, fondi */
   --color-secondary: #7F3FBF;         /* Viola medio - pulsanti, card */
-  --color-light: #A266FF;             /* Viola chiaro - hover soft, border */
+  --color-light: #E6D5FF;             /* Viola chiarissimo - sfondo generale */
   --color-accent: #FF4C4C;            /* Rosso acceso - CTA, errori */
   --color-background: #1E102A;        /* Quasi nero - sfondo generale */
 
   /* Texts */
   --color-text-primary: #FFFFFF;      /* Bianco - testi principali */
-  --color-text-secondary: #D1B2FF;    /* Viola chiarissimo - testi secondari/disabilitati */
+  --color-text-secondary: #D1B2FF;
+  --color-text-tertiary: #1E102A;  
+  --color-text-accent-dark:#B22234;  
   --color-text-active: #FFD700;
 }
 
@@ -33,7 +36,7 @@ html{
 }
 
 body{
-  background-image: linear-gradient(to bottom,var(--color-background), var(--color-light))  ;
+  background-color: var(--color-light);
   min-height: 100vh;
   margin: 0;
   padding: 0;
