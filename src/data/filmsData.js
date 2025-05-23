@@ -1,4 +1,4 @@
-export const films = [
+export const horrorFilms = [
   {
     id: 1,
     title: "Evil Dead 2",
