@@ -1,12 +1,17 @@
 <template>
-    <h1 class="">Homepage</h1>
+    <div class="page-wrapper">
+        <Hero />
+    </div>
 </template>
 
-<script setup></script>
+<script setup>
+import Hero from '../components/Hero.vue';
+</script>
 
 <style scoped>
-h1{
-    text-transform: uppercase;
-    font-size: 50px;
+.page-wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
 }
 </style>

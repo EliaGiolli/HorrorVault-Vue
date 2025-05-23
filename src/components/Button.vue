@@ -34,7 +34,7 @@ const isRouter = !!props.to;
 .customBtn {
   background-color: var(--color-accent);
   color: var(--color-text-primary);
-  padding: 0.6rem;
+  padding: 1rem;
   margin: 0 auto;
   border-radius: 11px;
   box-shadow: 5px 5px 10px var(--color-text-primary);
@@ -46,6 +46,6 @@ const isRouter = !!props.to;
 
 .customBtn:is(:hover, .router-link-active) {
   background-color: var(--color-text-active);
-  color: var(--color-background);
+  color: var(--color-text-tertiary);
 }
 </style>

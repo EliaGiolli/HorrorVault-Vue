@@ -1,8 +1,6 @@
 <template>
   <section class="about-container" aria-labelledby="about-heading">
     <article class="about-content">
-      <!-- aria-labelledby help screen reader to read the title -->
-      <!-- they are usually linked to an id attribute -->
       <h1 id="about-heading"><strong>Benvenuto su HorrorVault</strong></h1>
       <p class="about-description">
         <strong>HorrorVault</strong> è il tuo rifugio digitale per esplorare il mondo del <strong>cinema horror</strong>.
