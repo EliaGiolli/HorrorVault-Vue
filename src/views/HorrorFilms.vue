@@ -30,7 +30,7 @@ import { horrorFilms } from '../data/filmsData.js'
 <style scoped>
 .intro-horror {
   margin-block: 2rem;
-  padding: 1.5rem;
+  padding: 1rem;
   background-color: var(--color-text-primary);
   border-left: 6px solid var(--color-primary);
   border-radius: 1rem;
