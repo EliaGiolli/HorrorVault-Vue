@@ -59,6 +59,13 @@
             </div>
           </article>
         </section>
+        <section class="form-section">
+          <h2>Iscriviti alla nostra newsletter horror</h2>
+          <p>
+            Rimani aggiornato sulle ultime novità, recensioni e curiosità dal mondo del cinema horror. Ricevi direttamente nella tua casella email consigli esclusivi, anteprime e contenuti dedicati agli appassionati del genere.
+          </p>
+          <Form />
+        </section>
     </div>
 </template>
 
@@ -67,6 +74,7 @@ import { computed, onMounted } from 'vue';
 import { useMovies } from '../composables/useFetch';
 import Hero from '../components/Hero.vue';
 import Card from '../components/Card.vue';
+import Form from '../components/Form.vue'
 import { horrorFilms } from '../data/filmsData';
 
 const bestHorrorFilms = computed(() => horrorFilms.slice(0, 4));
@@ -114,6 +122,28 @@ onMounted(() => {
   font-size: var(--font-2xl);
   margin-bottom: 1rem;
 }
+.form-section{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+.form-section h2{
+    font-size: var(--font-2xl);
+    color: var(--color-accent);
+    text-align: center;
+    margin-block: 1.5rem;
+}
+
+.form-section p{
+  line-height: 1.6;
+  padding: 1rem;
+  color: var(--color-background);
+  font-size: var(--font-lg);
+}
 
 
 @media (min-width: 760px){
@@ -129,5 +159,10 @@ onMounted(() => {
   .second-intro h2{
     font-size: var(--font-3xl);
   }
+  .form-section p{
+    font-size: var(--font-xl);
+    padding-inline: 1.5rem;
+  }
+
 }
 </style>

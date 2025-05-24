@@ -1,32 +1,72 @@
 <template>
-  <form action="GET" class="form-wrapper">
+  <form action="GET" 
+    class="form-wrapper" 
+    @submit.prevent="handleSubmit"
+    >
     <div class="form-section">
       <label for="username">Username</label>
-      <input id="username" type="text" placeholder="username" v-model="formInputs.userName" />
+      <input 
+        id="username" 
+        type="text" 
+        placeholder="username"
+        v-model.lazy.trim="formInputs.userName" 
+        required
+        />
     </div>
+  
     <div class="form-section">
       <label for="password">Password</label>
-      <input id="password" type="password" placeholder="password" v-model="formInputs.password" />
+      <input 
+        id="password" 
+        type="password" 
+        placeholder="password" 
+        v-model.trim="formInputs.password" 
+        required/>
     </div>
     <div class="form-section">
       <label for="repeatedPassword">Ripeti password</label>
-      <input id="repeatedPassword" type="password" placeholder="ripeti password" v-model="formInputs.repeatedPassword" />
+      <input 
+        id="repeatedPassword" 
+        type="password" 
+        placeholder="ripeti password" 
+        :class="{ 'input-error': !matchPassword && formInputs.repeatedPassword }"
+        v-model.trim="formInputs.repeatedPassword" 
+        required/>
     </div>
+
+     <!-- The message appears only when the user finishes typing -->
+    <div v-if="!matchPassword && formInputs.repeatedPassword">
+      <p>Le password non coincidono. Riprova</p>
+    </div>
+
     <div class="form-section">
       <label for="message">Perché vuoi iscriverti alla nostra newsletter?</label>
-      <textarea id="message" placeholder="Spiegaci il perché" v-model="formInputs.message"></textarea>
+      <textarea 
+        id="message" 
+        placeholder="Spiegaci il perché" 
+        v-model.lazy.trim="formInputs.message"></textarea>
     </div>
     <div class="form-section checkbox-section">
-      <input id="accepted" type="checkbox" v-model="formInputs.accepted" />
+      <input 
+        id="accepted" 
+        type="checkbox" 
+        v-model="formInputs.accepted" 
+        required/>
       <label for="accepted" class="checkbox-label">Policy accettata</label>
     </div>
-    <Button>Iscriviti alla newsletter!</Button>
+    <Button type="submit">Iscriviti alla newsletter!</Button>
+  
+    <div v-if="isSaved" class="success-message">
+      Dati salvati correttamente!
+    </div>
   </form>
 </template>
 
 <script setup>
-import { reactive } from 'vue';
-import Button from './Button.vue'
+import { reactive, computed } from 'vue';
+import Button from './Button.vue';
+import { useLocalStorage } from '../composables/useLocalStorage';
+
 const formInputs = reactive({
   userName: '',
   password: '',
@@ -34,6 +74,40 @@ const formInputs = reactive({
   message: '',
   accepted: false
 });
+
+
+// Persist formInputs to localStorage
+const { isSaved } = useLocalStorage(formInputs, 'newsletterForm');
+
+//check the correctness of the passwords and saves it in the memory
+const matchPassword = computed(() =>{
+  return formInputs.password === formInputs.repeatedPassword;
+});
+
+
+// --- HANDLING SUBMIT FORM lOGIC---
+function handleSubmit() {
+  if (!matchPassword.value) {
+    alert('Le password non coincidono.');
+    return;
+  }
+
+  if (!formInputs.accepted) {
+    alert('Devi accettare la privacy policy!');
+    return;
+  }
+
+  if (
+    !formInputs.userName.trim() ||
+    !formInputs.password.trim() ||
+    !formInputs.repeatedPassword.trim()
+  ) {
+    alert('Compila tutti i campi obbligatori.');
+    return;
+  }
+
+  console.log('Form valido e pronto!');
+}
 </script>
 
 <style scoped>
@@ -92,6 +166,12 @@ const formInputs = reactive({
   accent-color: var(--color-accent);
 }
 
+.input-error {
+  border-color: red;
+  box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.2);
+}
+
+
 .checkbox-section {
   flex-direction: row;
   align-items: center;
@@ -105,6 +185,20 @@ const formInputs = reactive({
   font-weight: 500;
   cursor: pointer;
 }
+
+.error-message {
+  color: red;
+  font-size: var(--font-sm, 0.875rem);
+  margin-top: 0.5rem;
+}
+
+.success-message {
+  color: var(--color-accent);
+  margin-top: 1rem;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
 
 @media (max-width: 600px) {
   .form-section {
