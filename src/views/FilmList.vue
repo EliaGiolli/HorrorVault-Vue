@@ -44,72 +44,7 @@ onMounted(async () => {
 <style scoped>
 .film-container {
   padding: 2rem;
-  min-height: 500px;
-
-  .loading {
-    font-size: var(--font-lg);
-    color: var(--color-accent);
+  min-height: 500px; 
   }
 
-  .error {
-    background-color: #fff;
-    color: var(--color-accent);
-    padding: 1rem;
-    border-radius: 5px;
-  }
-
-  .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-  }
-
-  .film-card {
-    background-color: var(--color-background);
-    border: 1px solid var(--color-border);
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease;
-
-    &:hover {
-      transform: scale(1.02);
-    }
-
-    img.film-img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-    }
-
-    .card-content {
-      padding: 1rem;
-
-      h2 {
-        font-size: var(--font-2xl);
-        font-weight: bold;
-        color: var(--color-accent);
-        margin-bottom: 0.75rem;
-      }
-
-      .card-info {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-
-        p {
-          font-size: var(--font-lg);
-          line-height: 1.4;
-        }
-      }
-    }
-  }
-
-  @media (min-width: 768px) {
-    .film-card .card-content h2 {
-      font-size: var(--font-xl);
-    }
-  }
-}
 </style>
