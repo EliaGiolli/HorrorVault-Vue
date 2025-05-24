@@ -60,10 +60,12 @@
           </article>
         </section>
         <section class="form-section">
-          <h2>Iscriviti alla nostra newsletter horror</h2>
-          <p>
-            Rimani aggiornato sulle ultime novità, recensioni e curiosità dal mondo del cinema horror. Ricevi direttamente nella tua casella email consigli esclusivi, anteprime e contenuti dedicati agli appassionati del genere.
-          </p>
+          <div class="form-intro">
+            <h2>Iscriviti alla nostra newsletter horror</h2>
+            <p>
+              Rimani aggiornato sulle ultime novità, recensioni e curiosità dal mondo del cinema horror. Ricevi direttamente nella tua casella email consigli esclusivi, anteprime e contenuti dedicati agli appassionati del genere.
+            </p>
+          </div>
           <Form />
         </section>
     </div>
@@ -94,34 +96,47 @@ onMounted(() => {
   width: 100%;
 }
 .first-intro{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 2rem;
-  color: var(--color-background);
-  font-size: var(--font-xl);
+  margin-block: 2.5rem;
+  padding: 1rem;
+  background-color: var(--color-text-primary);
+  border-left: 5px solid var(--color-primary);
+  border-radius: 0.5rem;
 }
 
 .first-intro h2{
-  color: var(--color-accent);
   font-size: var(--font-2xl);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-accent)
 }
 
+.first-intro p{
+  font-size: var(--font-lg);
+  line-height: 1.6;
+  color: var(--color-text-tertiary);
+}
+
+
 .second-intro{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 2rem;
-  color: var(--color-background);
-  font-size: var(--font-xl);
+  margin-block: 2.5rem;
+  padding: 1rem;
+  background-color: var(--color-text-primary);
+  border-left: 5px solid var(--color-primary);
+  border-radius: 0.5rem;
 }
 
 .second-intro h2{
-  color: var(--color-accent);
   font-size: var(--font-2xl);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-accent)
 }
+
+.second-intro p{
+  font-size: var(--font-lg);
+  line-height: 1.6;
+  color: var(--color-text-tertiary);
+}
+
+
 .form-section{
   width: 100%;
   display: flex;
@@ -130,7 +145,13 @@ onMounted(() => {
   align-items: center;
   text-align: center;
 }
-
+.form-intro{
+  margin-block: 2.5rem;
+  padding: 1rem;
+  background-color: var(--color-text-primary);
+  border-left: 5px solid var(--color-primary);
+  border-radius: 0.5rem;
+}
 .form-section h2{
     font-size: var(--font-2xl);
     color: var(--color-accent);
