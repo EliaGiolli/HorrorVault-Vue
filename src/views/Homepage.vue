@@ -96,8 +96,9 @@ onMounted(() => {
   width: 100%;
 }
 .first-intro{
+  height: 300px;
   margin-block: 2.5rem;
-  padding: 1rem;
+  padding: 2rem; 
   background-color: var(--color-text-primary);
   border-left: 5px solid var(--color-primary);
   border-radius: 0.5rem;
@@ -117,8 +118,9 @@ onMounted(() => {
 
 
 .second-intro{
+  height: 300px;
   margin-block: 2.5rem;
-  padding: 1rem;
+  padding: 2rem; 
   background-color: var(--color-text-primary);
   border-left: 5px solid var(--color-primary);
   border-radius: 0.5rem;
@@ -146,8 +148,9 @@ onMounted(() => {
   text-align: center;
 }
 .form-intro{
+  height: 300px;
   margin-block: 2.5rem;
-  padding: 1rem;
+  padding: 2rem; 
   background-color: var(--color-text-primary);
   border-left: 5px solid var(--color-primary);
   border-radius: 0.5rem;
